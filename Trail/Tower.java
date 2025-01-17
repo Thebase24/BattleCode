@@ -24,10 +24,10 @@ public class Tower
                 MapLocation nextLoc = rc.getLocation().add(dir);
                 int robotType = Trail.RobotPlayer.rng.nextInt(2);
 
-                if ((robotType == 0 && rc.canBuildRobot(UnitType.SOLDIER, nextLoc) && rc.getMoney() > 1000)|| Trail.RobotPlayer.turnCount >= 1500) {
+                if ((robotType == 0 && rc.canBuildRobot(UnitType.SOLDIER, nextLoc) && rc.getMoney() > 1200)|| Trail.RobotPlayer.turnCount >= 1500) {
                     rc.buildRobot(UnitType.SOLDIER, nextLoc);
 
-                } else if (robotType == 1 && rc.canBuildRobot(UnitType.MOPPER, nextLoc) && rc.getMoney() > 1000 && RobotPlayer.turnCount <= 1500) {
+                } else if (robotType == 1 && rc.canBuildRobot(UnitType.MOPPER, nextLoc) && rc.getMoney() > 1200 && RobotPlayer.turnCount <= 1500) {
                     rc.buildRobot(UnitType.MOPPER, nextLoc);
 
                 }/* else if (robotType >= 2 && rc.canBuildRobot(UnitType.SPLASHER, nextLoc) && rc.getMoney() > 700) {
